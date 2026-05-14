@@ -124,23 +124,36 @@ export default function HomePage() {
 
     {/* BUTTON */}
 
-    <button
-      className="
-        mt-6
-        bg-white/30
-        backdrop-blur-md
-        border border-white/40
-        text-gray-900
-        px-6
-        py-4
-        rounded-2xl
-        font-semibold
-        transition
-        hover:scale-[1.02]
-      "
-    >
-      Start Your Next Run Story ✨
-    </button>
+    <Link
+  href="/teddy?prompt=Help me create my next running reel idea"
+  className="
+    mt-6
+
+    inline-flex
+    items-center
+    justify-center
+
+    bg-white/30
+    backdrop-blur-md
+
+    border border-white/40
+
+    text-gray-900
+
+    px-6
+    py-4
+
+    rounded-2xl
+
+    font-semibold
+
+    transition
+    hover:scale-[1.02]
+    active:scale-[0.98]
+  "
+>
+  Start Your Next Run Story ✨
+</Link>
   </div>
 </section>
 
