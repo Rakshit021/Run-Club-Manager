@@ -5,7 +5,6 @@ import {
   useState,
 } from "react";
 
-import { useSearchParams } from "next/navigation";
 
 type Message = {
   role: "user" | "assistant";
@@ -13,8 +12,6 @@ type Message = {
 };
 
 export default function TeddyPage() {
-  const searchParams =
-    useSearchParams();
 
   const [input, setInput] =
     useState("");
@@ -34,15 +31,20 @@ export default function TeddyPage() {
   /* AUTO-SEND PROMPT */
 
   useEffect(() => {
-    const prompt =
-      searchParams.get("prompt");
+  const params =
+    new URLSearchParams(
+      window.location.search
+    );
 
-    if (prompt) {
-      setInput(prompt);
+  const prompt =
+    params.get("prompt");
 
-      autoSendPrompt(prompt);
-    }
-  }, [searchParams]);
+  if (prompt) {
+    setInput(prompt);
+
+    autoSendPrompt(prompt);
+  }
+}, []);
 
   /* AUTO SEND FUNCTION */
 
