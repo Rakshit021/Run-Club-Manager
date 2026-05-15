@@ -28,8 +28,6 @@ export default function TeddyPage() {
       },
     ]);
 
-  /* AUTO-SEND PROMPT */
-
   useEffect(() => {
   const params =
     new URLSearchParams(
