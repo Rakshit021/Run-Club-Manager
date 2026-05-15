@@ -58,7 +58,7 @@ Return ONLY valid JSON in this format:
 
     return NextResponse.json(
       {
-        error: "Failed to generate plan",
+        error: "Failed to generate plan, no response received from OpenAI",
       },
       {
         status: 500,
